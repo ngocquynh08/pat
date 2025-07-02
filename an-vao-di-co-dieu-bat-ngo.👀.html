@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>háp pi bớt đây ✨</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to right, #fddde6, #c1f0f6);
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    #openBtn {
+      margin-top: 25vh;
+      padding: 20px 40px;
+      font-size: 24px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #openBtn:hover {
+      background-color: #ff3b90;
+      transform: scale(1.05);
+    }
+
+    .card {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 420px;
+      padding: 30px;
+      background: #fffefa;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+    }
+
+    .card h1 {
+      font-size: 30px;
+      color: #ff4081;
+    }
+
+    .card p {
+      font-size: 18px;
+      margin-top: 12px;
+    }
+
+    .icons {
+      font-size: 32px;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="openBtn">🎁 Click để mở thiệp 🎉</button>
+
+  <div class="card" id="card">
+    <h1>🎂 Chúc Mừng Sinh Nhật bé iuu (Phan Anh Tún )😘🎉</h1>
+    <p>Chúc bạn đã bước sang tuổi 17! Tuổi mới đến rồi, hy vọng bạn sẽ có thật nhiều niềm vui, tiếng cười và những kỷ niệm đẹp bên gia đình, bạn bè. Chúc bạn học thật giỏi, đạt kết quả cao trong các kỳ thi và luôn là niềm tự hào của gia đình. Chúc bạn tuổi 17 thật ý nghĩa và đáng nhớ! 💖hẹ hẹ</p>
+    <div class="icons">🎈🎊🎂🎁🍰🍬</div>
+  </div>
+
+<!-- Nhạc nền Lo-fi dịu dàng -->
+  <audio id="bgMusic" loop>
+    <source src="happy-birthday-jazz-171120.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Âm thanh “ting” -->
+  <audio id="tingSound">
+    <source src="https://cdn.pixabay.com/download/audio/2023/03/06/audio_64dbfb670d.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const openBtn = document.getElementById("openBtn");
+    const card = document.getElementById("card");
+    const ting = document.getElementById("tingSound");
+    const bgMusic = document.getElementById("bgMusic");
+
+    openBtn.onclick = () => {
+      ting.play();
+      openBtn.style.display = "none";
+      card.style.display = "block";
+      bgMusic.play();
+    };
+  </script>
+
+</body>
+</html>
